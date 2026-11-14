@@ -22,7 +22,7 @@ jobs:
 
           
           - name: Install npm package
-            run: npm Install
+            run: npm ci
             working-directory: frontend
 
           - name: Run Linter
