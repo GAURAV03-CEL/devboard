@@ -6,10 +6,10 @@ on:
   push:
     branches: [advanced]
 
-job:
+jobs:
   frontend:
       runs-on: ubuntu-latest
-      Steps: 
+      steps: 
           - name: Checkout Code
             uses: actions/checkout@v7
 
