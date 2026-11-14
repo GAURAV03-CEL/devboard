@@ -6,7 +6,7 @@ on:
   push:
     branches: [advanced]
 
-job:
+jobs:
   frontend:
       runs-on: ubuntu-latest
       Steps: 
@@ -22,17 +22,19 @@ job:
 
           
           - name: Install npm package
-            run: npm ci
+            run: npm Install
+            working-directory: frontend
 
           - name: Run Linter
             run: npm run lint
+            working-directory: frontend
 
           - name: Run Tests
             run: npm run test
+            working-directory: frontend
 
   # backend:
   #      Steps: 
   #         -Lint
   #         -Build
-  #         -Test
-  #         -push
+  #         -Testgit pull origin advanced
